@@ -35,4 +35,9 @@ class Song
     song.name = song_name
     song
   end
+
+
+  def self.destroy_all
+    self.all.clear
+  end
 end
