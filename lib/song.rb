@@ -53,7 +53,7 @@ class Song
 
 #Build a class method Song.alphabetical that returns all the songs in ascending (a-z) alphabetical order.
   def self.alphabetical
-    self.sort_by{|song| song.name}
+    self.all.sort_by{|song| song.name}
   end
 
   def self.destroy_all
