@@ -27,6 +27,7 @@ class Song
     song.name = song_name
     song
   end
+  
 #Build a class constructor Song.create_by_name that takes in the string name of
 # a song and returns a song instance with that name set as its name property
 #and the song being saved into the @@all class variable.
@@ -35,7 +36,12 @@ class Song
     song.name = song_name
     song
   end
-
+  
+#Build a class finder Song.find_by_name that accepts the string name of a song 
+#and returns the matching instance of the song with that name. 
+  def self.find_by_name(song_name)
+    self.all.detect{|song| song.name == song_name}
+  end
 
   def self.destroy_all
     self.all.clear
