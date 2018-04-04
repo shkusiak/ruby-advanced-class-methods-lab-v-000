@@ -59,8 +59,9 @@ class Song
   #Build a class constructor that accepts a filename in the format of " - .mp3",
   # for example "Taylor Swift - Blank Space.mp3".
   def self.new_from_filename(file_name)
-    artist_name = file_name.split(" - ").first
-    song_name = file_name.split(" - ").second
+    file_name = file_name.split(" - ")
+    artist_name = file_name[0]
+    song_name = file_name[1]gsub(".mp3")
     self.new_from_filename(file_name)
   end
 
