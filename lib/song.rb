@@ -28,7 +28,7 @@ class Song
     song
   end
 #Build a class constructor Song.create_by_name that takes in the string name of
-# a song and returns a song instance with that name set as its name property 
+# a song and returns a song instance with that name set as its name property
 #and the song being saved into the @@all class variable.
   def create_by_name(song_name)
     song = self.create
