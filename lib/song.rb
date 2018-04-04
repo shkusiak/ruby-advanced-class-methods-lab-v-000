@@ -71,7 +71,7 @@ class Song
 #Build a class constructor that accepts a filename in the format of " - .mp3",
 #for example "Taylor Swift - Blank Space.mp3". The Song.create_from_filename
 #class method should not only parse the filename correctly but should also save the Song instance that was created.
-  def self.create_from_filename
+  def self.create_from_filename(file_name)
     file_name = file_name.split(" - ")
     artist_name = file_name[0]
     song_name = file_name[1].gsub(".mp3", "")
