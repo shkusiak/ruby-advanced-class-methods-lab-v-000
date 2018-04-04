@@ -43,14 +43,14 @@ class Song
     self.all.detect{|song| song.name == song_name}
   end
 
-#In order to prevent duplicate songs being created that actually represent the same 
-#song (based on the song name), we're going to build a Song.find_or_create_by_name 
-#class method. This method will accept a string name for a song and either return 
+#In order to prevent duplicate songs being created that actually represent the same
+#song (based on the song name), we're going to build a Song.find_or_create_by_name
+#class method. This method will accept a string name for a song and either return
 #a matching song instance with that name or create a new song with the name and return the song instance.
   def self.find_or_create_by_name(song_name)
     self.find_by_name(song_name) || self.create_by_name(song_name)
   end
-    
+
 
   def self.destroy_all
     self.all.clear
